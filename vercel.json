@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://nlw-space-time-web-sigma.vercel.app/$1",
+      "statusCode": 301
+    }
+  ]
+}
