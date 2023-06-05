@@ -51,4 +51,4 @@ The following tools were used in building the project
 
 ### Contato | Contact
 
-- [LinkedIn](https://www.linkedin.com/in/eduardo-gomes-220610227/)
+- [LinkedIn](https://www.linkedin.com/in/eduardo-n-gomes/)
