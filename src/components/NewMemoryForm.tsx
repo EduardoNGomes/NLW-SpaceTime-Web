@@ -6,10 +6,9 @@ import { FormEvent, useState } from 'react'
 import { api } from '@/lib/api'
 import Cookie from 'js-cookie'
 import { useRouter } from 'next/navigation'
-
 export function NewMemoryForm() {
-  const [loading, setLoading] = useState(false)
   const router = useRouter()
+  const [loading, setLoading] = useState(false)
 
   async function handleCreateMemory(event: FormEvent<HTMLFormElement>) {
     setLoading(true)
@@ -23,11 +22,16 @@ export function NewMemoryForm() {
 
     if (filetToUpload) {
       const uploadFormData = new FormData()
-      uploadFormData.set('file', filetToUpload)
+      uploadFormData.append('cover', filetToUpload)
+      try {
+        const uploadResponse = await api.post('upload', uploadFormData)
 
-      const uploadResponse = await api.post('upload', uploadFormData)
-
-      coverUrl = uploadResponse.data.fileUrl
+        coverUrl = uploadResponse.data.fileUrl
+      } catch (error) {
+        console.log(error)
+        setLoading(false)
+        return alert('imagem nao cadastrada')
+      }
     }
     const token = Cookie.get('token')
 
@@ -46,10 +50,12 @@ export function NewMemoryForm() {
         },
       )
     } catch (error) {
-      console.log(error)
       setLoading(false)
+      console.log(error)
+      return alert('memoria nao cadastrada')
     }
 
+    router.refresh()
     router.push('/')
   }
 

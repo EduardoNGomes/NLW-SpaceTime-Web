@@ -23,6 +23,7 @@ export function ButtonDelete({ id, token }: ButtonDeleteProps) {
     } catch (error) {
       console.log(error)
     }
+    router.refresh()
     router.push('/')
   }
   return (

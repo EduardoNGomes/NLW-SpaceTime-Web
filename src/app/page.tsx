@@ -9,7 +9,7 @@ import { ArrowRight } from 'lucide-react'
 
 dayjs.locale(ptBR)
 
-interface Memory {
+export interface Memory {
   id: string
   coverUrl: string
   excerpt: string

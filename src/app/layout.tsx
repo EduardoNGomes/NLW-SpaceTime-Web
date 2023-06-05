@@ -9,7 +9,6 @@ import { SignIn } from '@/components/SignIn'
 import { Hero } from '@/components/Hero'
 import { Copyright } from '@/components/Copyright'
 import { cookies } from 'next/headers'
-
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
 const baiJamJuree = BaiJamJuree({
   subsets: ['latin'],

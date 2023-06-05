@@ -10,10 +10,10 @@ import { ButtonDelete } from '@/components/ButtonDelete'
 dayjs.locale(ptBR)
 
 export const dynamicParams = true
-
-export async function generateStaticParams() {
-  return []
-}
+export const revalidate = 60
+// export async function generateStaticParams() {
+//   return []
+// }
 
 export default async function MemoryDetail({
   params,
