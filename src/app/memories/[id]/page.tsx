@@ -11,9 +11,6 @@ dayjs.locale(ptBR)
 
 export const dynamicParams = true
 export const revalidate = 60
-// export async function generateStaticParams() {
-//   return []
-// }
 
 export default async function MemoryDetail({
   params,
