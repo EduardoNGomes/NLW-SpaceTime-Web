@@ -5,7 +5,6 @@ import ptBR from 'dayjs/locale/pt-br'
 import { api } from '@/lib/api'
 import { cookies } from 'next/headers'
 import Image from 'next/image'
-import { ButtonDelete } from '@/components/ButtonDelete'
 
 dayjs.locale(ptBR)
 
@@ -37,7 +36,6 @@ export default async function MemoryDetail({
           <ChevronLeft className="h-4 w-4" />
           voltar à timeline
         </Link>
-        <ButtonDelete id={id} token={token} />
       </div>
 
       <div key={memory.id} className="space-y-4">
