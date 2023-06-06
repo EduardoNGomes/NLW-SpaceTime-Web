@@ -4,28 +4,29 @@
   <img alt="" title="#NextLevelWeek" src="https://i.imgur.com/ejJqbLB.png" />
  </h1>
 
-
-## Descrição do Projeto | Project description 
+## Descrição do Projeto | Project description
 
 <p>Este projeto foi desenvolvido na NLW SpaceTime, evento criado pela Rockeseat para para demostrar as novas tecnologias que utilizam a linguagem JavaScript.</p>
 <p>This project was developed at NLW SpaceTime, an event created by Rockeseat to demonstrate new technologies that use the JavaScript language.</p>
 
 ### Features
+
 - [x] Cadastrar usuário com autênticação do Github
 - [x] Cadastrar memórias, com texto e imagem
 - [x] Listar memorias cadastradas do usuário
 - [x] Deletar memória
-- [x] Apagar memoria 
-- [ ] Editar memoria | WIP
-- [ ] Listar todas as memorias públcias | WIP
+- [x] Editar memoria
+- [x] Listar todas as memorias públcias
 
 ### How to use
+
 - To use this project you need to clone this repository and clone https://github.com/EduardoNGomes/NLW-SpaceTime-Server ,
-  then in both : 
-- Create your .env.local like fille .env.local.example 
+  then in both :
+- Create your .env.local like fille .env.local.example
 - npm run dev
 
 ### 🛠 Tecnologias FRONT-END
+
 As seguintes ferramentas foram usadas na construção do projeto
 The following tools were used in building the project
 
@@ -38,6 +39,7 @@ The following tools were used in building the project
 - [Axios](https://axios-http.com/ptbr/docs/urlencoded)
 
 ### 🛠 Tecnologias BACK-END
+
 As seguintes ferramentas foram usadas na construção do projeto
 The following tools were used in building the project
 
@@ -47,7 +49,6 @@ The following tools were used in building the project
 - [Fastify-Multer](https://www.npmjs.com/package/fastify-multer)
 - [Cloudinary](https://cloudinary.com/)
 - [Axios](https://axios-http.com/ptbr/docs/urlencoded)
-
 
 ### Contato | Contact
 

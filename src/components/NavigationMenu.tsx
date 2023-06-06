@@ -2,13 +2,13 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-export function CurrentPage() {
+export function NavigationMenu() {
   const path = usePathname()
   const activePage = 'border-b-2 border-gray-50 text-xl text-gray-50'
   const defaultPage =
     'cursor-pointer border-b-2 border-transparent text-xl transition-all duration-300 hover:border-b-2 hover:border-solid hover:border-gray-50 hover:text-gray-50'
   return (
-    <div className="flex items-center justify-center gap-3 ">
+    <div className="flex items-center justify-center gap-3 pt-8">
       <Link href="/">
         <h1 className={path === '/' ? activePage : defaultPage}>
           Suas memorias

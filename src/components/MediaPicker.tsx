@@ -3,10 +3,10 @@
 import { ChangeEvent, useState } from 'react'
 
 interface MediaPickerProps {
-  srcImg?: string
+  srcImg?: string | null
 }
 
-export function MediaPicker({ srcImg }: MediaPickerProps) {
+export function MediaPicker({ srcImg = null }: MediaPickerProps) {
   const [preview, setPreview] = useState<string | null>(null)
 
   function onFileSelected(event: ChangeEvent<HTMLInputElement>) {
@@ -32,21 +32,23 @@ export function MediaPicker({ srcImg }: MediaPickerProps) {
         className="invisible h-0 w-0"
       />
 
-      {preview ? (
-        // eslint-disable-next-line
+      {preview
+        ? preview && (
+            // eslint-disable-next-line
         <img
-          src={preview}
-          alt=""
-          className="aspect-video w-full rounded-lg object-cover"
-        />
-      ) : (
-        // eslint-disable-next-line
+              src={preview}
+              alt=""
+              className="aspect-video w-full rounded-lg object-cover"
+            />
+          )
+        : srcImg && (
+            // eslint-disable-next-line
         <img
-          src={srcImg}
-          alt=""
-          className="aspect-video w-full rounded-lg object-cover"
-        />
-      )}
+              src={srcImg}
+              alt=""
+              className="aspect-video w-full rounded-lg object-cover"
+            />
+          )}
     </>
   )
 }
