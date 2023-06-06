@@ -6,6 +6,7 @@ import ptBR from 'dayjs/locale/pt-br'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Edit3 } from 'lucide-react'
+import { ButtonDelete } from '@/components/ButtonDelete'
 
 dayjs.locale(ptBR)
 
@@ -46,13 +47,16 @@ export default async function Home() {
         {memories.map((memory) => {
           return (
             <div key={memory.id} className="space-y-4">
-              <div className="flex justify-between">
+              <div className="flex items-center justify-between">
                 <time className="-ml-8 flex items-center gap-2 text-sm text-gray-100 before:h-px before:w-5 before:bg-gray-50">
                   {dayjs(memory.createdAt).format('D[ de ]MMMM[, ]YYYY')}
                 </time>
-                <Link href={`memories/update/${memory.id}`}>
-                  <Edit3 className="mr-2 h-5 w-5 text-gray-200 transition-all duration-300 hover:cursor-pointer hover:text-gray-50 " />
-                </Link>
+                <div className="mr-2 flex gap-2">
+                  <Link href={`memories/update/${memory.id}`}>
+                    <Edit3 className="h-5 w-5 text-gray-200 transition-all duration-300 hover:cursor-pointer hover:text-gray-50 " />
+                  </Link>
+                  <ButtonDelete id={memory.id} token={token} />
+                </div>
               </div>
               <Image
                 src={memory.coverUrl}
