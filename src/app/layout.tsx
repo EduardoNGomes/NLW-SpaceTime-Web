@@ -9,6 +9,7 @@ import { SignIn } from '@/components/SignIn'
 import { Hero } from '@/components/Hero'
 import { Copyright } from '@/components/Copyright'
 import { cookies } from 'next/headers'
+import { CurrentPage } from '@/components/CurrentPage'
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
 const baiJamJuree = BaiJamJuree({
   subsets: ['latin'],
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
 
           <div className="flex max-h-screen flex-col overflow-y-scroll bg-[url(../assets/bg-stars.svg)] bg-cover">
+            <CurrentPage />
             {children}
           </div>
         </main>

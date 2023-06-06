@@ -20,16 +20,6 @@ export default async function Home() {
 
   return (
     <main className="p-8">
-      <div className="flex items-center justify-center gap-3 ">
-        <Link href="/">
-          <h1 className="cursor-pointer border-b-2 border-transparent text-xl transition-all duration-300 hover:border-b-2 hover:border-solid hover:border-gray-50 hover:text-gray-50">
-            Suas memorias
-          </h1>
-        </Link>
-        <h2 className="border-b-2 border-gray-50 text-xl text-gray-50">
-          Todas as memorias
-        </h2>
-      </div>
       <div className="flex flex-col gap-10 p-8">
         {memories.map((memory) => {
           return (
